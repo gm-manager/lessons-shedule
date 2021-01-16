@@ -1,0 +1,68 @@
+@import "_reset.css";
+.wrapper, body{
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    background-color: lightgrey;
+}
+.table__header {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.table__body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* background-color: wheat; */
+}
+.table__day{
+    display:inline-block;
+    background-color:  lightgrey;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    margin: 10px;
+    transition: 0.5s;
+
+}
+.table__day:hover {
+    transform: scale(1.2);
+}
+
+.table__day p{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 7px;
+}
+
+.table__day ol{
+    list-style-type: none; /* Убираем исходные маркеры */
+    counter-reset:  item; /* Обнуляем счетчик списка */
+    transition: 1s;
+}
+.table__day ol li {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.table__day ol li:before {
+    content: counter(item) ') '; /* Добавляем к числам скобку */
+    counter-increment: item; /* Задаём имя счетчика */
+}
+
+.today{
+    background-color: white;
+    transform: rotate(5deg);
+}
+.today p{
+    background-color: gray;
+    color:white;
+}
