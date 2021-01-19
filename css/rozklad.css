@@ -31,7 +31,10 @@
 }
 .table__day:hover {
     box-shadow: 0 0 10px gray;
+    background-color: rgb(242, 242, 242);
+    z-index: 1;
     transform: scale(1.2);
+
 }
 
 .table__day p{
